@@ -1,0 +1,90 @@
+Pyinstaller
+Training image mean:  117
+Training image std :  56
+FFN Training
+C:\temp\UNI-EM\dist\main\train.exe  --train_coords C:\temp\UNI-EM\data\ffn\tf_record_file  --data_volumes validation1@C:\temp\UNI-EM\data\ffn\grayscale_maps.h5@raw  --label_volumes validation1@C:\temp\UNI-EM\data\ffn\groundtruth.h5@stack  --model_name convstack_3d.ConvStack3DFFNModel  --model_args  {"depth":12,"fov_size":[33,33,33],"deltas":[8,8,8]}  --image_mean 117 --image_stddev 56 --train_dir C:\temp\UNI-EM\data\DNN_model_tensorflow --max_steps 1000000
+I0415 01:11:48.209332 12956 train.py:721] Random seed: 1555258308
+{"depth":12,"fov_size":[33,33,33],"deltas":[8,8,8]}
+WARNING:tensorflow:From ffn\training\inputs.py:52: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W0415 01:11:48.380227 12956 tf_logging.py:125] From ffn\training\inputs.py:52: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From site-packages\tensorflow\python\training\input.py:276: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W0415 01:11:48.409209 12956 tf_logging.py:125] From site-packages\tensorflow\python\training\input.py:276: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From site-packages\tensorflow\python\training\input.py:188: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+W0415 01:11:48.436192 12956 tf_logging.py:125] From site-packages\tensorflow\python\training\input.py:188: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:From site-packages\tensorflow\python\training\input.py:197: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W0415 01:11:48.465174 12956 tf_logging.py:125] From site-packages\tensorflow\python\training\input.py:197: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From site-packages\tensorflow\python\training\input.py:197: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W0415 01:11:48.493157 12956 tf_logging.py:125] From site-packages\tensorflow\python\training\input.py:197: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From ffn\training\inputs.py:66: TFRecordReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TFRecordDataset`.
+W0415 01:11:48.515143 12956 tf_logging.py:125] From ffn\training\inputs.py:66: TFRecordReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TFRecordDataset`.
+WARNING:tensorflow:tf.op_scope(values, name, default_name) is deprecated, use tf.name_scope(name, default_name, values)
+W0415 01:11:48.533132 12956 tf_logging.py:120] tf.op_scope(values, name, default_name) is deprecated, use tf.name_scope(name, default_name, values)
+WARNING:tensorflow:From train.py:438: shuffle_batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.shuffle(min_after_dequeue).batch(batch_size)`.
+W0415 01:11:48.589098 12956 tf_logging.py:125] From train.py:438: shuffle_batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.shuffle(min_after_dequeue).batch(batch_size)`.
+INFO:tensorflow:Create CheckpointSaverHook.
+I0415 01:11:52.237851 12956 tf_logging.py:115] Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+I0415 01:11:52.659591 12956 tf_logging.py:115] Graph was finalized.
+INFO:tensorflow:Running local_init_op.
+I0415 01:11:52.849473 12956 tf_logging.py:115] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0415 01:11:52.867463 12956 tf_logging.py:115] Done running local_init_op.
+WARNING:tensorflow:From site-packages\tensorflow\python\training\monitored_session.py:804: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W0415 01:11:53.033361 12956 tf_logging.py:125] From site-packages\tensorflow\python\training\monitored_session.py:804: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+INFO:tensorflow:Error reported to Coordinator: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, Input to reshape is a tensor with 0 values, but the requested shape has 117649
+         [[{{node Reshape_1}} = Reshape[T=DT_UINT8, Tshape=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](LoadFromNumpyLike_1, Reshape_1/shape)]]
+I0415 01:11:53.117309  1200 tf_logging.py:115] Error reported to Coordinator: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, Input to reshape is a tensor with 0 values, but the requested shape has 117649
+         [[{{node Reshape_1}} = Reshape[T=DT_UINT8, Tshape=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](LoadFromNumpyLike_1, Reshape_1/shape)]]
+INFO:tensorflow:Saving checkpoints for 0 into C:\temp\UNI-EM\data\DNN_model_tensorflow\model.ckpt.
+I0415 01:11:54.117693 12956 tf_logging.py:115] Saving checkpoints for 0 into C:\temp\UNI-EM\data\DNN_model_tensorflow\model.ckpt.
+Traceback (most recent call last):
+  File "train.py", line 736, in <module>
+  File "site-packages\absl\app.py", line 300, in run
+  File "site-packages\absl\app.py", line 251, in _run_main
+  File "train.py", line 727, in main
+  File "train.py", line 709, in train_ffn
+  File "site-packages\tensorflow\python\training\monitored_session.py", line 783, in __exit__
+  File "site-packages\tensorflow\python\training\monitored_session.py", line 821, in _close_internal
+  File "site-packages\tensorflow\python\training\monitored_session.py", line 1069, in close
+  File "site-packages\tensorflow\python\training\monitored_session.py", line 1229, in close
+  File "site-packages\tensorflow\python\training\coordinator.py", line 389, in join
+  File "site-packages\six.py", line 692, in reraise
+  File "site-packages\tensorflow\python\training\queue_runner_impl.py", line 257, in _run
+  File "site-packages\tensorflow\python\client\session.py", line 1257, in _single_operation_run
+  File "site-packages\tensorflow\python\client\session.py", line 1407, in _call_tf_sessionrun
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Input to reshape is a tensor with 0 values, but the requested shape has 117649
+         [[{{node Reshape_1}} = Reshape[T=DT_UINT8, Tshape=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](LoadFromNumpyLike_1, Reshape_1/shape)]]
+[9340] Failed to execute script train
+FFN Training  was finished.
