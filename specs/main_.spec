@@ -31,7 +31,6 @@ a = Analysis(['./../main.py'],
                       ( '../icons/*', './icons/' ),
                       ( '../icons/Disabled/*', './icons/Disabled/' ),
                       ( '../segment/menu.json', './segment/' ),
-                      ( '../../tensorboard/*', './tensorboard/' )
                     ],
              hiddenimports=['scipy._lib.messagestream',
                       'pywt._extensions._cwt',
