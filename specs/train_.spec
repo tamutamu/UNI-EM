@@ -5,6 +5,11 @@ main_dir = os.path.abspath(SPECPATH)
 main_dir = os.path.dirname(main_dir)
 block_cipher = None
 
+
+## For build on public python env.
+mkldir = os.sep.join([sys.prefix, 'Library', 'bin'])
+os.environ['PATH'] += os.pathsep + mkldir
+
 pathex=[]
 for dirpath, dirnames, filenames in os.walk( path.join(main_dir, "segment","_3D_FFN","ffn") ):
     if os.path.basename(dirpath) != '__pycache__':

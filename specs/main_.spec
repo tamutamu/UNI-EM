@@ -7,6 +7,10 @@ main_dir = os.path.dirname(main_dir)
 import tensorboard as _
 WEBFILES = os.path.join(_.__path__[0], "webfiles.zip")
 
+## For build on public python env.
+mkldir = os.sep.join([sys.prefix, 'Library', 'bin'])
+os.environ['PATH'] += os.pathsep + mkldir
+
 block_cipher = None
 
 pathex=[
